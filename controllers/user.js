@@ -1,3 +1,4 @@
+// need to npm i bcryptjs
 const bcrypt = require('bcryptjs')
 const {layout} = require('../utils')
 const {User} = require('../models')
