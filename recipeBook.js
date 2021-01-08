@@ -83,11 +83,11 @@ let recipeBook = [
 }, 
 {
     id: 10, 
-    title: 'Carne Asada', 
-    desc: 'All about the flavor of grilled meat —rich and hearty—', 
-    preparation: 'Whisk the orange juice, lime juice, olive oil, garlic, oregano, chili powder, salt, cumin, pepper and cayenne in a small bowl. Place the steak in a 9x13 baking dish or gallon size ziplock bag and cover it with the marinade until fully coated. Refrigerate for 1 to 4 hours. Preheat the grill medium-high heat (400-450°F). Discard the extra marinade and season steak with salt and pepper. Grill the steaks for 5-8 minutes per side, depending on the thickness. Remove steaks and allow to rest for 5 minutes. Slice thinly against the grain and serve.', 
+    title: 'Donut Apples', 
+    desc: 'A tasty snack for the kids!', 
+    preparation: 'Divide cream cheese among three small bowls. In one bowl, add 1 teaspoon honey. In another bowl, add melted chocolate. In the last bowl, add remaining 1 teaspoon honey and pink food coloring. Stir each bowl together until combined. Slice apples and use a biscuit or cookie cutter to hollow out centers. Spread mixtures on apple slices and top with sprinkles.', 
     image: './images/image10.jpg', 
-    category: 'Mexican', 
-    ingredients: ['2 pounds flank or skirt steak', '1 orange, juiced', '2 limes, juiced', '2 tablespoons olive oil', '8 cloves of garlic, minced', '2 teaspoons oregano', '2 teaspoons chili powder', '2 teaspoons kosher salt', '2 teaspoons cumin', '1 teaspoon black pepper', '1/4 teaspoon cayenne pepper']
+    category: 'American', 
+    ingredients: ['12 oz cream cheese, softened, cut into thirds', '2 teaspoons honey, divided', '1/2 cup melted chocolate', '2 drops pink food coloring', '3 apples', 'Assorted sprinkles, for decorating']
 }, 
 ]
