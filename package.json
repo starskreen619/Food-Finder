@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "nodemonConfig": {
+    "ignore": ["sessions"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/starskreen619/Food-Finder.git"

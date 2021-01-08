@@ -7,6 +7,7 @@ const helmet = require('helmet');
 
 const es6Renderer = require('express-es6-template-engine');
 
+// need to npm i express-session session-file-store
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
@@ -27,7 +28,7 @@ app.set('views', 'templates');
 app.set('view engine', 'html');
 
 app.use(session({
-    store: new FileStore(),  // no options for now
+    store: new FileStore(),
     secret: process.env.SESSION_SECRET,
     saveUninitialized: true,
     resave: true,
@@ -36,10 +37,9 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }));
-
 app.use(logger);
+app.use(express.static('public'));
 
-// Parse any form data from POST requests
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', homeController.home);
