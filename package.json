@@ -4,10 +4,13 @@
   "description": "Tinder like app to find great food and prepare them awesome meals.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
-    "ignore": ["sessions"]
+    "ignore": [
+      "sessions"
+    ]
   },
   "repository": {
     "type": "git",
