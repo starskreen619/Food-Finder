@@ -12,11 +12,13 @@ const FileStore = require("session-file-store")(session);
 
 const { requireLogin } = require("./auth");
 const homeController = require("./controllers/homecontroller");
-const userRouter = require("./routers/userrouter");
+
+
+const { userRouter, listRouter, accountRouter } = require("./routers");
+
 const { memberController } = require("./controllers/");
 
 const app = express();
-
 const server = http.createServer(app);
 
 const PORT = 5000;
@@ -47,10 +49,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", homeController.home);
-
 app.use("/users", userRouter);
-
-app.get("/members-only",  memberController.membersOnly, requireLogin);
+app.get("/members-only", memberController.membersOnly, requireLogin);
 
 app.get("/unauthorized", (req, res) => {
   res.send(`Whoops! Looks like you need to 
@@ -60,6 +60,8 @@ app.get("/unauthorized", (req, res) => {
             Or
             <a href="/users/login">Log in</a>`);
 });
+app.use("/list", listRouter);
+app.use("/account", accountRouter);
 
 server.listen(PORT, HOST, () => {
   console.log(`Listening at port ${PORT}`);

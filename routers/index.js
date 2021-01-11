@@ -1,3 +1,5 @@
 module.exports = {
-    userRouter: require('./userrouter'),
-};
+    userRouter: require("./userRouter"),
+    accountRouter: require("./accountrouter"),
+    listRouter: require("./listRouter"),
+  };
