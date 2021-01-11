@@ -9,21 +9,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      likes.belongsTo(models.user, {
-        foreignKey: "user_Id",
+      likes.belongsTo(models.User, {
+        foreignKey: "userid",
       });
-      likes.belongsTo(models.recipe, {
-        foreignKey: "recipe_id",
-      });
-
-      models.user.belongsToMany(models.recipe, {
-        through: likes,
-        foreignKey: "user_Id",
+      likes.belongsTo(models.recipes, {
+        foreignKey: "recipeid",
       });
 
-      models.recipe.belongsToMany(models.user, {
+      models.User.belongsToMany(models.recipes, {
         through: likes,
-        foreignKey: "recipe_Id",
+        foreignKey: "userid",
+      });
+
+      models.recipes.belongsToMany(models.User, {
+        through: likes,
+        foreignKey: "recipeid",
       });
     }
   }
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       recipe_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: "rececipe",
+          model: "recipe",
           key: "id",
         },
       },

@@ -13,6 +13,7 @@ const FileStore = require("session-file-store")(session);
 const { requireLogin } = require("./auth");
 const homeController = require("./controllers/homecontroller");
 const userRouter = require("./routers/userrouter");
+const { memberController } = require("./controllers/");
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use(
     },
   })
 );
+
 app.use(logger);
 app.use(express.static("public"));
 
@@ -48,15 +50,7 @@ app.get("/", homeController.home);
 
 app.use("/users", userRouter);
 
-app.get("/members-only", requireLogin, (req, res) => {
-  console.log(req.session.user);
-  const { username } = req.session.user;
-  res.send(`
-<h1>Hi ${username}!</h1>
-<br>
-<a href="/users/logout">Log out</a>
-`);
-});
+app.get("/members-only",  memberController.membersOnly, requireLogin);
 
 app.get("/unauthorized", (req, res) => {
   res.send(`Whoops! Looks like you need to 
