@@ -1,11 +1,11 @@
 const { layout } = require("../utils");
 
-const listController = (req, res) => {
+const generateList = (req, res) => {
   res.render("list", {
     ...layout,
   });
 };
 
 module.exports = {
-  listController,
+  generateList
 };
