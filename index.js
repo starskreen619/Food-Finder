@@ -13,6 +13,8 @@ const FileStore = require("session-file-store")(session);
 const { requireLogin } = require("./auth");
 const homeController = require("./controllers/homecontroller");
 const userRouter = require("./routers/userrouter");
+const listRouter = require("./routers/listRouter");
+const accountRouter = require("./routers/accountRouter");
 const { memberController } = require("./controllers/");
 
 const app = express();
@@ -56,7 +58,7 @@ app.get("/unauthorized", (req, res) => {
             Or
             <a href="/users/login">Log in</a>`);
 });
-app.get("/list", listController.list);
+app.get("/list", listController.listController);
 app.get("/account", accountController.account);
 
 server.listen(PORT, HOST, () => {
