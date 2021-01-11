@@ -12,7 +12,7 @@ const FileStore = require("session-file-store")(session);
 
 const { requireLogin } = require("./auth");
 const homeController = require("./controllers/homecontroller");
-const userRouter = require("./routers/userrouter");
+const userRouter = require("./routers/userRouter");
 const listRouter = require("./routers/listRouter");
 const accountRouter = require("./routers/accountRouter");
 const { memberController } = require("./controllers/");
@@ -50,6 +50,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", homeController.home);
 app.use("/users", userRouter);
 app.get("/members-only", memberController.membersOnly, requireLogin);
+
 app.get("/unauthorized", (req, res) => {
   res.send(`Whoops! Looks like you need to 
             <br>
@@ -58,8 +59,8 @@ app.get("/unauthorized", (req, res) => {
             Or
             <a href="/users/login">Log in</a>`);
 });
-app.get("/list", listController.listController);
-app.get("/account", accountController.account);
+app.use("/list", listRouter);
+app.use("/account", accountRouter);
 
 server.listen(PORT, HOST, () => {
   console.log(`Listening at port ${PORT}`);
