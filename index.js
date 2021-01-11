@@ -12,9 +12,9 @@ const FileStore = require("session-file-store")(session);
 
 const { requireLogin } = require("./auth");
 const homeController = require("./controllers/homecontroller");
-const userRouter = require("./routers/userrouter");
-const listRouter = require("./routers/listRouter");
-const accountRouter = require("./routers/accountRouter");
+
+const { userRouter, listRouter, accountRouter } = require("./routers");
+
 const { memberController } = require("./controllers/");
 
 const app = express();
