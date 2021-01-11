@@ -27,8 +27,9 @@ const processNewUser = async (req, res) => {
             })
             res.redirect(`${req.baseUrl}/login`)
         } catch (e) {
-            if (e.name === "SequelizeUniqueContraintError") {
-                console.log('That username is taken!')
+            if (e.name === "SequelizeUniqueConstraintError") {
+                console.log('That username is taken!');
+                return res.status(500).send({ success: false, message: 'User already exists!' });
             }
             res.redirect(`${req.baseUrl}/new`)
         }

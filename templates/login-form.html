@@ -1,16 +1,16 @@
 ${header}
-<h1>${title}</h1>
-<div class="login">
+<h1 class="registration-title">${title}</h1>
   <form method="POST">
+    <div class="form-group">
     <label>
       Username:
-      <input name="username" type="text" autofocus />
+      <input name="username" class="form-control" type="text" autofocus />
     </label>
     <label>
       Password:
-      <input name="password" type="password" />
+      <input name="password" class="form-control" type="password" />
     </label>
-    <input type="submit" value="Submit" />
+    <input type="submit" class="btn btn-primary" id="submit-btn" value="Submit" />
+    </div>
   </form>
-</div>
 ${footer}

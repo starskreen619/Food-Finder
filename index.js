@@ -15,7 +15,6 @@ const homeController = require("./controllers/homecontroller");
 const userRouter = require("./routers/userrouter");
 
 const app = express();
-app.use(session({ secret: "somevalue" })); //added this line to avoid the "Error: secret option required for sessions"
 
 const server = http.createServer(app);
 
