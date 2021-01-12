@@ -7,7 +7,7 @@ module.exports = {
         title: "Artichoke Dip",
         desc: "A basic dip popular at parties.",
         preparation:
-          "Preheat oven to 350°F. Coarsely chop atrtichoke hearts. Combine all ingredients in a medium bowl. Transfer mixture to 4-cup ovenproof soufflé dish or small casserole dish. Sprinkle some parmesan over the top for a thin crispy crust. Bake dip until heated through, about 30 minutes",
+          "Preheat oven to 350°F. Coarsely chop artichoke hearts. Combine all ingredients in a medium bowl. Transfer mixture to 4-cup ovenproof soufflé dish or small casserole dish. Sprinkle some parmesan over the top for a thin crispy crust. Bake dip until heated through, about 30 minutes",
         image: "images/image01.jpg",
         category: "American",
         createdAt: new Date(),
