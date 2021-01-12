@@ -1,12 +1,18 @@
 const layout = {
     partials: {
         header: '/partials/header',
-        footer: '/partials/footer',
-        memberHeader: '/memberPartials/memberHeader',
-        memberFooter: '/memberPartials/memberFooter'
+        footer: '/partials/footer'
     }    
 };
 
+const memberLayout = {
+    partials: {
+        memberHeader: '/memberPartials/memberHeader',
+        memberFooter: '/memberPartials/memberFooter'
+    }
+};
+
 module.exports = {
-    layout
+    layout,
+    memberLayout
 };
