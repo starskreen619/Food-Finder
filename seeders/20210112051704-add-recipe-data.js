@@ -4,96 +4,50 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return await queryInterface.bulkInsert("recipes", [
       {
-        id: 1,
         title: "Artichoke Dip",
         desc: "A basic dip popular at parties.",
         preparation:
           "Preheat oven to 350°F. Coarsely chop atrtichoke hearts. Combine all ingredients in a medium bowl. Transfer mixture to 4-cup ovenproof soufflé dish or small casserole dish. Sprinkle some parmesan over the top for a thin crispy crust. Bake dip until heated through, about 30 minutes",
-        image: "./images/image01.jpg",
+        image: "images/image01.jpg",
         category: "American",
-        ingredients: [
-          "14oz ounce can artichoke hearts, drained",
-          "1/3 cup mayo",
-          "1/2 cup sour cream",
-          "3/4 cup grated Parmesan cheese",
-          "1/4 cup minced onion",
-          "2 cloves minced garlic",
-          "1/2 tsp black pepper",
-        ],
+        ingredients: "14oz ounce can artichoke hearts, drained, 1/3 cup mayo, 1/2 cup sour cream, 3/4 cup grated Parmesan cheese, 1/4 cup minced onion, 2 cloves minced garlic, 1/2 tsp black pepper"
       },
       {
-        id: 2,
         title: "Spatchcock Chicken",
         desc:
           "Spatchcocking makes for a bird with super crisp skin and moist meat, in about half the time it takes to roast a whole bird.",
         preparation:
           "Preheat oven to 450 degrees F. Line a large rimmed baking sheet with foil. Place chicken, breast side down, on a work surface. Starting at the tail end, cut along both sides of backbone with kitchen shears. Remove backbone. Grabbing hold of both sides of the chicken, open it like a book. Turn breast side up. Push down on each side of breast with your hands until you hear it crack. Flatten chicken and transfer to one short end of the prepared baking sheet. Repeat with the second chicken. Combine salt, tarragon, paprika, and pepper in a small bowl. Stir in oil. Run your fingers under chicken skin and rub tarragon paste under skin. Slide lemon slices under skin, in a single layer. Roast until skin is crisp and an instant-read thermometer inserted into thickest part of breast reads 165 degrees F, about 35 minutes. Let stand 5 minutes before cutting each chicken into 8 pieces.",
-        image: "./images/image02.jpg",
+        image: "images/image02.jpg",
         category: "American",
-        ingredients: [
-          "2 (3 1/2) pound whole chickens, wingtips removed, drained",
-          "2 teaspoons salt",
-          "1 teaspoon dried tarragon",
-          "1 teaspoon paprika",
-          "1/4 teaspoon black pepper",
-          "4 teaspoons olive oil",
-          "2 lemons thinly sliced and seeded",
-        ],
+        ingredients: "2 (3 1/2) pound whole chickens, wingtips removed, drained, 2 teaspoons salt, 1 teaspoon dried tarragon, 1 teaspoon paprika, 1/4 teaspoon black pepper, 4 teaspoons olive oil, 2 lemons thinly sliced and seeded",
       },
       {
-        id: 3,
         title: "Klupskies (Polish Burgers)",
         desc: "A burger. Polish style",
         preparation:
           "Mix ground beef, onion, green pepper, egg, ketchup, and sea salt together in a bowl; mix in the white bread pieces until evenly distributed. Form the mixture into 4 patties. Spray a large skillet with olive oil cooking spray and set over medium heat. Cook the burgers until well-browned on the bottoms, about 10 minutes; flip the burgers and cook until the meat is no longer pink and the juices run clear, 8 to 10 more minutes.",
-        image: "./images/image03.jpg",
+        image: "images/image03.jpg",
         category: "Polish",
-        ingredients: [
-          "1 pound ground beef",
-          "1 small onion, diced",
-          "1 egg",
-          "1/2 green pepper, diced",
-          "2 tablespoons ketchup",
-          "1/4 teaspoon sea salt",
-          "2 slices white bread, torn into small pieces",
-        ],
+        ingredients: "1 pound ground beef, 1 small onion, diced, 1 egg, 1/2 green pepper, diced, 2 tablespoons ketchup, 1/4 teaspoon sea salt, 2 slices white bread torn into small pieces"
       },
       {
-        id: 4,
         title: "Simple Macaroni and Cheese",
         desc: "A cheap and tasty Mac n Cheese!",
         preparation:
           "Bring a large pot of lightly salted water to a boil. Cook elbow macaroni in the boiling water, stirring occasionally until cooked through, 8 minutes. Drain. Melt butter in a saucepan over medium heat; stir in flour, salt, and pepper until smooth, about 5 minutes. Slowly pour milk into butter-flour mixture while continuously stirring until mixture is smooth and bubbling, about 5 minutes. Add Cheddar cheese to milk mixture and stir until cheese is melted, 2 to 4 minutes. Fold macaroni into cheese sauce until coated.",
-        image: "./images/image04.jpg",
+        image: "images/image04.jpg",
         category: "American",
-        ingredients: [
-          "1 (8 ounce) box elbow macaroni",
-          "1/4 cup of butter",
-          "1/4 cup of flour",
-          "1/2 teaspoon salt",
-          "2 cups milk",
-          "2 cups shredded Cheddar cheese",
-        ],
+        ingredients: "1 (8oz) box elbow macaroni, 1/4 cup of butter, 1/4 cup of flour, 1/2 teaspoon salt, 2 cups milk, 2 cups shredded Cheddar cheese"
       },
       {
-        id: 5,
         title: "Beef Stir-Fry",
         desc: "Great for a busy weeknight!",
         preparation:
           "Heat vegetable oil in a large wok or skillet over medium-high heat; cook and stir beef until browned, 3 to 4 minutes. Move beef to the side of the wok and add broccoli, bell pepper, carrots, green onion, and garlic to the center of the wok. Cook and stir vegetables for 2 minutes. Stir beef into vegetables and season with soy sauce and sesame seeds. Continue to cook and stir until vegetables are tender, about 2 more minutes.",
-        image: "./images/image05.jpg",
+        image: "images/image05.jpg",
         category: "Asian",
-        ingredients: [
-          "2 tablespoons vegetable oil",
-          "1 pound beef sirloin, cut into 2-inch strips",
-          "1 1/2 cups fresh broccoli florets",
-          "1 red bell pepper, cut into matchsticks",
-          "2 carrots, thinly sliced",
-          "1 green onion, chopped",
-          "1 teaspoon minced garlic",
-          "2 tablespoons soy sauce",
-          "2 tablespoons sesame seeds, toasted",
-        ],
+        ingredients: "2 tablespoons vegetable oil, 1 pound beef sirloin, cut into 2-inch strips, 1 1/2 cups fresh broccoli florets, 1 red bell pepper, cut into matchsticks, 2 carrots, thinly sliced, 1 green onion, chopped, 1 teaspoon minced garlic, 2 tablespoons soy sauce, 2 tablespoons sesame seeds, toasted"
       },
       {
         title: "Sheet Pan Olive Bar Chicken",
