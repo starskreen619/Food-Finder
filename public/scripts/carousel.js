@@ -207,7 +207,7 @@ class Carousel {
         likes.classList.add('likes')
 
         let picture = document.createElement('img')
-        picture.setAttribute('alt', 'chicken')
+        picture.setAttribute('alt', 'food')
         picture.setAttribute('src', img)
         image.appendChild(picture)
         this.board.appendChild(card)
@@ -226,9 +226,13 @@ let board = document.querySelector('#board')
 
 let carousel = new Carousel(board)
 console.log('hey')
-carousel.push("./images/image02.jpg")
-carousel.push("./images/image03.jpg")
 carousel.push("./images/image04.jpg")
+carousel.push("./images/image03.jpg")
+carousel.push("./images/image02.jpg")
+carousel.push("./images/image01.jpg")
+
+
+
 
 carousel.handle()
 
