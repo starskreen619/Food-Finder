@@ -1,1 +1,9 @@
-${header} ${footer}
+${header} 
+
+<h1>Your Favorite Recipes</h1>
+
+<ul>
+${recipes.map(r => `<li>${r.title}</li>`).join('')}
+</ul>
+
+${footer}

@@ -12,12 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       List.belongsTo(models.User, {
-        foreignKey: "userid",
+        foreignKey: "userId",
       });
     }
   };
   List.init({
-    Title: DataTypes.STRING
+    Title: DataTypes.STRING,
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'List',

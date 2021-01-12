@@ -1,3 +1,4 @@
+// const { recipes }= require("../../models")
 
 class Carousel {
   constructor(element) {
@@ -210,6 +211,14 @@ class Carousel {
     image.appendChild(picture);
     this.board.appendChild(card);
 
+    let form = document.createElement("form")
+    form.setAttribute("method", "POST")
+    let input = document.createElement("input")
+    input.setAttribute("name", "recipe")
+    input.setAttribute("type", "submit")
+
+
+
     // card.style.backgroundImage = `url(${img})`
     //     // "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
     //     // "url('./images/image02.jpg')"
@@ -224,6 +233,9 @@ let board = document.querySelector('#board')
 let carousel = new Carousel(board)
 console.log('hey');
 // console.log(recipeBook[0]);
+
+
+
 carousel.push("./images/image04.jpg")
 carousel.push("./images/image03.jpg")
 carousel.push("./images/image02.jpg")
