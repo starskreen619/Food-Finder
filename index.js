@@ -15,11 +15,9 @@ const { requireLogin } = require("./auth");
 const {
   userRouter,
   listRouter,
-  accountRouter,
-  contactusRouter,
 } = require("./routers");
 
-const { memberController, homeController } = require("./controllers");
+const { memberController, homeController, unauthorized } = require("./controllers");
 
 const app = express();
 const server = http.createServer(app);
@@ -53,19 +51,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", homeController.home);
 app.use("/users", userRouter);
-app.get("/members-only", memberController.membersOnly, requireLogin);
 
-app.get("/unauthorized", (req, res) => {
-  res.send(`Whoops! Looks like you need to 
-            <br>
-            <a href="/users/new">Sign up</a>
-            <br>
-            Or
-            <a href="/users/login">Log in</a>`);
-});
-app.use("/contactus", contactusRouter);
+app.get("/members-only", memberController.membersOnly, requireLogin);
 app.use("/list", listRouter);
-app.use("/account", accountRouter);
+
+app.get("/unauthorized", unauthorized.badUser)
 
 server.listen(PORT, HOST, () => {
   console.log(`Listening at port ${PORT}`);

@@ -1,11 +1,11 @@
 const { layout } = require("../utils");
 
-const contactusPage = (req, res) => {
-  res.render("contactus", {
+const badUser = (req, res) => {
+  res.render("unauthorized", {
     ...layout,
   });
 };
 
 module.exports = {
-  contactusPage,
+  badUser
 };

@@ -1,4 +1,4 @@
-const {layout} = require('../utils')
+const {memberLayout} = require('../utils')
 
 const membersOnly = (req, res) => {
     console.log(req.session.user);
@@ -7,7 +7,7 @@ const membersOnly = (req, res) => {
         locals: {
             username
         },
-        ...layout
+        ...memberLayout
     })
 };
 

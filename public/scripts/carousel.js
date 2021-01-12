@@ -1,3 +1,4 @@
+
 class Carousel {
   constructor(element) {
     this.board = element;
@@ -217,7 +218,23 @@ class Carousel {
   }
 }
 
-let board = document.querySelector("#board");
+
+let board = document.querySelector('#board')
+
+let carousel = new Carousel(board)
+console.log('hey');
+// console.log(recipeBook[0]);
+carousel.push("./images/image04.jpg")
+carousel.push("./images/image03.jpg")
+carousel.push("./images/image02.jpg")
+carousel.push("./images/image01.jpg")
+
+// let i = 0;
+// while (i <= recipeBook.length) {
+//     carousel.push(recipeBook[])
+//     i++;
+// }
+
 
 let carousel = new Carousel(board);
 console.log("hey");
@@ -228,6 +245,15 @@ carousel.push("./images/image01.jpg");
 
 carousel.handle();
 
+
 //modify push to accept more info
 //backend route to render recipe titles from database
 // ${arr.map().join("")}
+
+
+//create a template with two form tags that send different information
+//like route form
+//swipe left, post to likes page
+//dislike route form
+//swipe right post to dislikes?(or just go to next image)
+
