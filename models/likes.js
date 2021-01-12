@@ -43,6 +43,7 @@ module.exports = (sequelize, DataTypes) => {
           key: "id",
         },
       },
+      likeCount: DataTypes.INTEGER,
     },
     {
       sequelize,
