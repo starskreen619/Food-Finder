@@ -24,7 +24,7 @@ const processNewUser = async (req, res) => {
             const newUser = await User.create({
                 username,
                 hash
-            }).then(user => res.json(user));
+            });
             res.redirect(`${req.baseUrl}/login`)
         } catch (e) {
             if (e.name === "SequelizeUniqueConstraintError") {
