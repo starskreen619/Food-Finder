@@ -3,14 +3,9 @@
 } */
 
 
-.nav-link {
+.nav-link, .nav-item {
   position: relative;
   text-align: end;
-
-.nav-link, .nav-item {
-    position: relative;
-    text-align: end;
-}
 
 .nav-user {
     padding: 8px 0px 8px 0px;
