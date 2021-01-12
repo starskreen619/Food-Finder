@@ -11,12 +11,10 @@ const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 
 const { requireLogin } = require("./auth");
-const homeController = require("./controllers/homecontroller");
-
 
 const { userRouter, listRouter, accountRouter } = require("./routers");
 
-const { memberController } = require("./controllers/");
+const { memberController, homeController } = require("./controllers");
 
 const app = express();
 const server = http.createServer(app);
