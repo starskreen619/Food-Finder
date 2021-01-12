@@ -2,9 +2,16 @@
     background-color: #FE7860;
 } */
 
-.nav-link {
+.nav-link, .nav-item {
     position: relative;
-    text-align: end
+    text-align: end;
+}
+
+.nav-user {
+    padding: 8px 0px 8px 0px;
+    position: relative;
+    text-align: end;
+    border-bottom: thin solid;
 }
 
 /* added from monday 11Jan */

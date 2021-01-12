@@ -3,6 +3,4 @@ module.exports = {
   userController: require("./usercontroller"),
   memberController: require("./memberController"),
   listController: require("./listController"),
-  accountController: require("./accountController"),
-  contactusController: require("./contactusController"),
 };
