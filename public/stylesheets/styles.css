@@ -65,11 +65,15 @@ body {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+}
 
+.submit-div {
+    display:flex;
+    flex-wrap: wrap;
 }
 
 #submit-btn {
-    margin-top: 15px
+    position: relative;
 }
 
 #myElement {
