@@ -235,14 +235,6 @@ carousel.push("./images/image01.jpg")
 //     i++;
 // }
 
-
-let carousel = new Carousel(board);
-console.log("hey");
-carousel.push("./images/image04.jpg");
-carousel.push("./images/image03.jpg");
-carousel.push("./images/image02.jpg");
-carousel.push("./images/image01.jpg");
-
 carousel.handle();
 
 
