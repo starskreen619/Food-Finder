@@ -12,7 +12,12 @@ const FileStore = require("session-file-store")(session);
 
 const { requireLogin } = require("./auth");
 
-const { userRouter, listRouter, accountRouter } = require("./routers");
+const {
+  userRouter,
+  listRouter,
+  accountRouter,
+  contactusRouter,
+} = require("./routers");
 
 const { memberController, homeController } = require("./controllers");
 
@@ -58,6 +63,7 @@ app.get("/unauthorized", (req, res) => {
             Or
             <a href="/users/login">Log in</a>`);
 });
+app.use("/contactus", contactusRouter);
 app.use("/list", listRouter);
 app.use("/account", accountRouter);
 

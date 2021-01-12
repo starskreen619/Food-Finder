@@ -11,4 +11,4 @@ npx sequelize-cli model:generate --name "users" --attributes 'username:string, h
 
 npx sequelize-cli model:generate --name "recipes" --attributes 'title:string, desc:string, preparation:string, category:string, ingredients:string, image:string'
 
-npx sequelize-cli model:generate --name "likes" --attributes 'recipe_id:integer, user_id:integer'
+npx sequelize-cli model:generate --name "likes" --attributes 'recipe_id:integer, user_id:integer, likeCount:integer'
