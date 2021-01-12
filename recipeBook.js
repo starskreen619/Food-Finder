@@ -91,3 +91,8 @@ let recipeBook = [
     ingredients: ['12 oz cream cheese, softened, cut into thirds', '2 teaspoons honey, divided', '1/2 cup melted chocolate', '2 drops pink food coloring', '3 apples', 'Assorted sprinkles, for decorating']
 }, 
 ]
+
+
+module.exports = {
+    recipeBook
+}
