@@ -1,5 +1,3 @@
-
-
 push(recipeCard) {
     let card = document.createElement("div");
     let title = document.createElement("div");
