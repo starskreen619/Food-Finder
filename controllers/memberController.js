@@ -17,12 +17,13 @@ const addLike = async (req, res) => {
     const { userid } = req.body;
     console.log(recipeid);
     console.log(userid)
+    console.log(req.body)
 
     const newLike = await likes.create({
         recipe_id: recipeid,
         user_id: userid
     });
-    console.log(newLike)
+    // console.log(newLike)
     res.redirect('/members-only')
 }
 

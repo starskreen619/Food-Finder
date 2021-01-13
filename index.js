@@ -48,6 +48,7 @@ app.use(logger);
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 
 app.get("/", homeController.home);
 app.use("/users", userRouter);
