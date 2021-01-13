@@ -1,9 +1,15 @@
-${header} 
+${memberHeader} 
 
 <h1>Your Favorite Recipes</h1>
 
-<ul>
+<!-- <ul>
 ${recipes.map(r => `<li>${r.title}</li>`).join('')}
+</ul> -->
+
+<!--make a list of liked recipes when user clicks recipe list, 
+should be able to click through to display single recipe on 'recipe-card.html'  -->
+<ul>
+${recipes.map(r => `<li><a href="#">${r.title}</a></li>`).join('')}
 </ul>
 
-${footer}
+${memberFooter}
