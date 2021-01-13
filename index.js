@@ -22,7 +22,7 @@ const { memberController, homeController, unauthorized } = require("./controller
 const app = express();
 const server = http.createServer(app);
 
-const PORT = 5000;
+const PORT = 4000;
 const HOST = "0.0.0.0";
 
 const logger = morgan("tiny");
@@ -57,8 +57,17 @@ app.get("/members-only", memberController.membersOnly, requireLogin); // require
 app.post("/members-only/addlike", memberController.addLike)
 app.use("/list", listRouter);
 
+app.get('/list/:id', async (req, res) => {
+  const { id } = req.params;
+  const { card } = req.body;
+  res.render('recipe-card', {
+    locals: {
+      title
+    }
+})})
+
 app.get("/unauthorized", unauthorized.badUser)
 
 server.listen(PORT, HOST, () => {
   console.log(`Listening at port ${PORT}`);
-});
+})

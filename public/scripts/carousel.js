@@ -1,5 +1,3 @@
-// const { recipes }= require("../../models")
-
 class Carousel {
   constructor(element) {
     this.board = element;
@@ -146,6 +144,7 @@ class Carousel {
       // check threshold and movement direction
       if (propX > 0.25 && e.direction == Hammer.DIRECTION_RIGHT) {
         console.log("swiped right");
+        newLike()
         successful = true;
         // get right border position
         posX = this.board.clientWidth;
@@ -210,14 +209,6 @@ class Carousel {
     picture.setAttribute("src", img);
     image.appendChild(picture);
     this.board.appendChild(card);
-
-    // let form = document.createElement("form")
-    // form.setAttribute("method", "POST")
-    // let input = document.createElement("input")
-    // input.setAttribute("name", "recipe")
-    // input.setAttribute("type", "submit")
-
-
 
     // card.style.backgroundImage = `url(${img})`
     //     // "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
