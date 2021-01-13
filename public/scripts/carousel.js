@@ -210,11 +210,14 @@ class Carousel {
     image.appendChild(picture);
     this.board.appendChild(card);
 
+<<<<<<< HEAD
     // card.style.backgroundImage = `url(${img})`
     //     // "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
     //     // "url('./images/image02.jpg')"
 
     // this.board.insertBefore(card, this.board.firstChild)
+=======
+>>>>>>> fe9c5d8331355f5ec0a7343768ee3332a445f47d
   }
 }
 
@@ -223,20 +226,15 @@ let board = document.querySelector('#board')
 
 let carousel = new Carousel(board)
 console.log('hey');
-// console.log(recipeBook[0]);
 
 
+for (let i = 1; i < 10; i++) { 
+    carousel.push(`./images/image0${i}.jpg`);
+}
 
-carousel.push("./images/image04.jpg")
-carousel.push("./images/image03.jpg")
-carousel.push("./images/image02.jpg")
-carousel.push("./images/image01.jpg")
-
-// let i = 0;
-// while (i <= recipeBook.length) {
-//     carousel.push(recipeBook[])
-//     i++;
-// }
+// carousel.push("./images/image03.jpg")
+// carousel.push("./images/image02.jpg")
+// carousel.push("./images/image01.jpg")
 
 carousel.handle();
 
