@@ -211,11 +211,11 @@ class Carousel {
     image.appendChild(picture);
     this.board.appendChild(card);
 
-    let form = document.createElement("form")
-    form.setAttribute("method", "POST")
-    let input = document.createElement("input")
-    input.setAttribute("name", "recipe")
-    input.setAttribute("type", "submit")
+    // let form = document.createElement("form")
+    // form.setAttribute("method", "POST")
+    // let input = document.createElement("input")
+    // input.setAttribute("name", "recipe")
+    // input.setAttribute("type", "submit")
 
 
 

@@ -1,21 +1,36 @@
 ${memberHeader}
-<!-- <h1>Hi ${username}!</h1> -->
+<h1>Hi ${username}!</h1>
 <br>
 <div id="board">
-    <!-- <div class="card">
+<!-- <div class="card">
         <div class="title">Chicken</div>
         <div class="image"><img src="image01.jpg" alt="chicken"></div>
         <div class="likes">Likes: 10</div>
-    </div>  -->
+    </div> -->
+<!-- <form method='POST' action='/members-only/addlike'>
+    <input name="recipeid" value="2">
+    <input name="userid" value="1">
+    
+    <input type="submit" value="submit">
+</form> -->
+</div>
+<script>
+    fetch('members-only/addlike', { 
+    method: 'POST',
+    body: JSON.stringify({
+        recipe_id: 22,
+        user_id: 11,
+        likeCount: 5
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error => {
+        console.error('Error:', error)
+    }));
 
-    <h2>Food Finder</h2>
-    <form method="POST">
-        <label>
-            ${title}
-        </label>
-    </form>
- </div> 
-<script src="./scripts/hammer.js"></script>
-<script src="./scripts/carousel.js"></script>
-<script src="./scripts/likes.js"></script>
+</script>
+<!-- <script src="/scripts/hammer.js"></script>
+<script src="/scripts/carousel.js"></script>
+<script src="/scripts/likes.js"></script> -->
 ${memberFooter}

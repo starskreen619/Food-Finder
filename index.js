@@ -52,7 +52,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", homeController.home);
 app.use("/users", userRouter);
 
-app.get("/members-only", memberController.membersOnly, requireLogin);
+app.get("/members-only", memberController.membersOnly, requireLogin); // requirelogin must be before function
+app.post("/members-only/addlike", memberController.addLike)
 app.use("/list", listRouter);
 
 app.get("/unauthorized", unauthorized.badUser)
