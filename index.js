@@ -19,6 +19,8 @@ const {
 
 const { memberController, homeController, unauthorized } = require("./controllers");
 
+const { recipes } = require('./models')
+
 const app = express();
 const server = http.createServer(app);
 
@@ -62,9 +64,11 @@ app.get('/list/:id', async (req, res) => {
   const { card } = req.body;
   res.render('recipe-card', {
     locals: {
-      title
+      title: req.body.title,
+      likes: req.body.likes
     }
-})})
+  })
+})
 
 app.get("/unauthorized", unauthorized.badUser)
 
