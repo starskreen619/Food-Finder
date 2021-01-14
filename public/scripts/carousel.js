@@ -50,6 +50,7 @@ class Carousel {
   }
 
   onTap(e) {
+    console.log({e})
     // get finger position on top card
     let propX =
       (e.center.x - e.target.getBoundingClientRect().left) /
@@ -144,7 +145,10 @@ class Carousel {
       // check threshold and movement direction
       if (propX > 0.25 && e.direction == Hammer.DIRECTION_RIGHT) {
         console.log("swiped right");
-        newLike()
+        console.log(e.target);
+        console.log(e.currentTarget);
+        const id = e.target.getAttribute("data-recipe-id")
+        newLike(id)
         successful = true;
         // get right border position
         posX = this.board.clientWidth;
@@ -190,9 +194,7 @@ class Carousel {
     }
   }
 
-
-
-  push(img) {
+  push(img, cardTitle, id) {
     let card = document.createElement("div");
     let title = document.createElement("div");
     let image = document.createElement("div");
@@ -206,10 +208,17 @@ class Carousel {
     image.classList.add("image");
     likes.classList.add("likes");
 
+    card.setAttribute("data-recipe-id", id)
+
     let picture = document.createElement("img");
     picture.setAttribute("alt", "food");
     picture.setAttribute("src", img);
+    picture.setAttribute("data-recipe-id", id)
     image.appendChild(picture);
+
+    let recipeTitle = document.createElement("h1")
+    title.appendChild(recipeTitle)
+    recipeTitle.append(cardTitle)
     this.board.appendChild(card);
   }
 }
@@ -220,13 +229,14 @@ let board = document.querySelector('#board')
 let carousel = new Carousel(board)
 console.log('hey');
 
-recipeBook.forEach(r => {
-  carousel.push(r.title)
+recipeData.forEach(r => {
+  carousel.push(r.image, r.title, r.id)
+  console.log(r.id) 
 })
 
-for (let i = 1; i < 10; i++) { 
-    carousel.push(`./images/image0${i}.jpg`);
-}
+// for (let i = 1; i < 10; i++) { 
+//     carousel.push(`./images/image0${i}.jpg`);
+// }
 
 carousel.handle();
 
