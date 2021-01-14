@@ -14,7 +14,13 @@ ${memberHeader}
     
     <input type="submit" value="submit">
 </form> -->
+
+${allRecipes}
 </div>
+<script>
+    const recipeData = ${JSON.stringify(allRecipes)};
+    console.log(recipeData)
+</script>
 <script>
     const newLike = (userid, recipeid) => {
         fetch('members-only/addlike', { 

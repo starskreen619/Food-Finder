@@ -1,6 +1,4 @@
-
-
-push(recipeCard) {
+const generateRecipeCard = () => {
     let card = document.createElement("div");
     let title = document.createElement("div");
     let description = document.createElement("div");
