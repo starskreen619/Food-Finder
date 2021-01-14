@@ -196,16 +196,16 @@ class Carousel {
 
   push(img, cardTitle, id) {
     let card = document.createElement("div");
-    let title = document.createElement("div");
     let image = document.createElement("div");
+    let title = document.createElement("div");
     let likes = document.createElement("div");
 
-    card.appendChild(title);
     card.appendChild(image);
+    card.appendChild(title);
     card.appendChild(likes);
     card.classList.add("card");
-    title.classList.add("title");
     image.classList.add("image");
+    title.classList.add("title");
     likes.classList.add("likes");
 
     card.setAttribute("data-recipe-id", id)
@@ -216,7 +216,7 @@ class Carousel {
     picture.setAttribute("data-recipe-id", id)
     image.appendChild(picture);
 
-    let recipeTitle = document.createElement("h1")
+    let recipeTitle = document.createElement("h2")
     title.appendChild(recipeTitle)
     recipeTitle.append(cardTitle)
     this.board.appendChild(card);
