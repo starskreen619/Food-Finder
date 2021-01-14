@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      recipes.hasMany(models.likes, {
+        foreignKey: "recipe_id"
+      });
     }
   };
   recipes.init({

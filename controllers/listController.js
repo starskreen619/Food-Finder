@@ -1,5 +1,6 @@
 const { memberLayout } = require("../utils");
-const { List } = require('../models')
+const { likes } = require('../models')
+const { recipes } = require('../models')
 
 // const generateList = (req, res) => {
 //   res.render("list", {
@@ -7,17 +8,33 @@ const { List } = require('../models')
 //   });
 // };
 
+const processForm = async (req, res) => {
+  const { id } = req.session.user;
+  const { recipeid } = req.body
+  if (id) {
+      const listLike = await likes.create({
+          recipeid
+      });
+      console.log(listLike);
+      res.redirect(`${req.baseUrl}/`)
+  } else {
+      res.redirect(req.url);
+  }
+  
+};
+
 const generateList = async (req, res) => {
   const { id } = req.session.user;
   if (id) {
-    const recipes = await List.findAll({
+    const myRecipes = await likes.findAll({
       where: {
-        userId: id
+        user_id: id,
       }
     });
+    console.log(myRecipes)
     res.render('list', {
       locals: {
-        recipes
+        myRecipes
       },
       ...memberLayout
     })
@@ -27,5 +44,6 @@ const generateList = async (req, res) => {
 }
 
 module.exports = {
-  generateList
+  generateList,
+  processForm
 };
