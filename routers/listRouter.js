@@ -3,6 +3,6 @@ const router = express.Router();
 
 const listController = require("../controllers/listController");
 
-router.get("/list", listController.generateList).post("/list", listController.generateList);
+router.get("/list", listController.generateList).post("/list", listController.processForm);
 
 module.exports = router;

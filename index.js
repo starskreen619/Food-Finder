@@ -19,7 +19,9 @@ const {
 
 const { memberController, homeController, unauthorized } = require("./controllers");
 
-const { recipes } = require('./models')
+const { recipes, likes } = require('./models')
+
+const { memberLayout } = require('./utils')
 
 const app = express();
 const server = http.createServer(app);
@@ -55,9 +57,31 @@ app.use(express.json())
 app.get("/", homeController.home);
 app.use("/users", userRouter);
 
-app.get("/members-only", memberController.membersOnly, requireLogin); // requirelogin must be before function
+app.get("/members-only", requireLogin, memberController.membersOnly); // requirelogin must be before function
 app.post("/members-only/addlike", memberController.addLike)
-app.use("/list", listRouter);
+app.get("/list", async (req, res) => {
+  const { username } = req.session.user
+  const { id } = req.session.user;
+  const { recipeid } = req.body
+  if (id) {
+    const myLikes = await likes.findAll({
+      where: {
+        user_id: id
+      },
+      include: recipes
+    });
+    console.log(JSON.stringify(myLikes, null, 4));
+    res.render('list', {
+      locals: {
+        username,
+        myRecipes: myLikes.map(l => l.recipe)
+      },
+      ...memberLayout
+    })
+  } else {
+    res.redirect('/')
+  }
+})
 
 app.get('/list/:id', async (req, res) => {
   const { id } = req.params;
