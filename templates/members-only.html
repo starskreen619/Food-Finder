@@ -4,43 +4,12 @@ ${memberHeader}
 </div>
 </br>
 <div id="board">
-
-<!-- <div class="card">
-        <div class="title">Chicken</div>
-        <div class="image"><img src="image01.jpg" alt="chicken"></div>
-        <div class="likes">Likes: 10</div>
-    </div> -->
-<!-- <form method='POST' action='/members-only/addlike'>
-    <input name="recipeid" value="2">
-    <input name="userid" value="1">
-    
-    <input type="submit" value="submit">
-</form> -->
-
 </div>
+
 <script>
     const recipeData = ${JSON.stringify(allRecipes)};
-    
 </script>
-<script>
-    const newLike = (recipeid) => {
-    console.log(recipeid)
-        fetch('/members-only/addlike', { 
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    //   'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: JSON.stringify({recipeid})
-
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch((error => {
-        console.error('Error:', error)
-    }));
-} // move to carrousel.js
-</script>
+<script src="/scripts/newLike.js"></script>
 <script src="/scripts/hammer.js"></script>
 <script src="/scripts/carousel.js"></script>
 <script src="/scripts/likes.js"></script>
