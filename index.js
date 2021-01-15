@@ -13,8 +13,7 @@ const FileStore = require("session-file-store")(session);
 const { requireLogin } = require("./auth");
 
 const {
-  userRouter,
-  listRouter,
+  userRouter
 } = require("./routers");
 
 const { memberController, homeController, unauthorized } = require("./controllers");
@@ -81,6 +80,16 @@ app.get("/list", async (req, res) => {
   } else {
     res.redirect('/')
   }
+})
+
+app.get("/development", (req, res) => {
+  const { username } = req.session.user
+  res.render('development', {
+    locals: {
+      username
+    },
+    ...memberLayout
+  })
 })
 
 app.get('/list/:id', async (req, res) => {

@@ -1,9 +1,13 @@
 ${memberHeader} 
 
-<h1>Your Favorite Recipes</h1>
+<h1 class="fav-recipes">Your Favorite Recipes</h1>
 
 <ul>
-${myRecipes.map(r => `<li><a href="#">${r.title}</a></li>`).join('')}
+${myRecipes.map(r => `<li><a href="/development">${r.title}</a></li>`).join('')}
 </ul>
+
+<div class='swipe-button'>
+<a class="btn btn-primary" id="swipe" href="/members-only" role="button">Start Swiping</a>
+</div>
 
 ${memberFooter}
