@@ -3,7 +3,6 @@ const {likes} = require('../models')
 const {recipes} = require('../models')
 
 const membersOnly = async (req, res) => {
-    console.log(req.session.user);
     const { username } = req.session.user;
     const allRecipes = await recipes.findAll()
 
@@ -19,10 +18,6 @@ const membersOnly = async (req, res) => {
 const addLike = async (req, res) => {
     const { id } = req.session.user
     const { recipeid } = req.body;
-
-    console.log(recipeid);
-    console.log(id)
-    console.log(req.body)
 
     const newLike = await likes.create({
         recipe_id: recipeid,

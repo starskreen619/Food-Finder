@@ -3,7 +3,7 @@ ${memberHeader}
 <h1 class="fav-recipes">Your Favorite Recipes</h1>
 
 <ul>
-${myRecipes.map(r => `<li><a href="/development">${r.title}</a></li>`).join('')}
+${myRecipes.map(r => `<li><a href="/list/${r.id}">${r.title}</a></li>`).join('')}
 </ul>
 
 <div class='swipe-button'>
