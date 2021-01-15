@@ -84,3 +84,21 @@ body {
     padding-left:10px;
     padding-right:10px
 }
+
+.development {
+  text-align: center;
+  top: 50%
+}
+
+.fav-recipes {
+  text-align: center;
+}
+
+.swipe-button {
+  display: flex;
+  justify-content: center;
+}
+
+#swipe {
+  align-self: center;
+}
