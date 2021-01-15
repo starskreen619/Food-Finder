@@ -12,7 +12,7 @@ module.exports = {
         category: "American",
         createdAt: new Date(),
         updatedAt: new Date(),
-        ingredients: "14oz ounce can artichoke hearts, drained, 1/3 cup mayo, 1/2 cup sour cream, 3/4 cup grated Parmesan cheese, 1/4 cup minced onion, 2 cloves minced garlic, 1/2 tsp black pepper"
+        ingredients: "14oz ounce can artichoke hearts; drained, 1/3 cup mayo, 1/2 cup sour cream, 3/4 cup grated Parmesan cheese, 1/4 cup minced onion, 2 cloves minced garlic, 1/2 tsp black pepper"
       },
       {
         title: "Spatchcock Chicken",
@@ -24,7 +24,7 @@ module.exports = {
         category: "American",
         createdAt: new Date(),
         updatedAt: new Date(),
-        ingredients: "2 (3 1/2) pound whole chickens, wingtips removed, drained, 2 teaspoons salt, 1 teaspoon dried tarragon, 1 teaspoon paprika, 1/4 teaspoon black pepper, 4 teaspoons olive oil, 2 lemons thinly sliced and seeded",
+        ingredients: "2 (3 1/2) pound whole chickens, wingtips removed; drained, 2 teaspoons salt, 1 teaspoon dried tarragon, 1 teaspoon paprika, 1/4 teaspoon black pepper, 4 teaspoons olive oil, 2 lemons thinly sliced and seeded",
       },
       {
         title: "Klupskies (Polish Burgers)",
@@ -35,7 +35,7 @@ module.exports = {
         category: "Polish",
         createdAt: new Date(),
         updatedAt: new Date(),
-        ingredients: "1 pound ground beef, 1 small onion, diced, 1 egg, 1/2 green pepper, diced, 2 tablespoons ketchup, 1/4 teaspoon sea salt, 2 slices white bread torn into small pieces"
+        ingredients: "1 pound ground beef, 1 small onion; diced, 1 egg, 1/2 green pepper; diced, 2 tablespoons ketchup, 1/4 teaspoon sea salt, 2 slices white bread torn into small pieces"
       },
       {
         title: "Simple Macaroni and Cheese",
@@ -57,7 +57,7 @@ module.exports = {
         category: "Asian",
         createdAt: new Date(),
         updatedAt: new Date(),
-        ingredients: "2 tablespoons vegetable oil, 1 pound beef sirloin, cut into 2-inch strips, 1 1/2 cups fresh broccoli florets, 1 red bell pepper, cut into matchsticks, 2 carrots, thinly sliced, 1 green onion, chopped, 1 teaspoon minced garlic, 2 tablespoons soy sauce, 2 tablespoons sesame seeds, toasted"
+        ingredients: "2 tablespoons vegetable oil, 1 pound beef sirloin; cut into 2-inch strips, 1 1/2 cups fresh broccoli florets, 1 red bell pepper; cut into matchsticks, 2 carrots; thinly sliced, 1 green onion; chopped, 1 teaspoon minced garlic, 2 tablespoons soy sauce, 2 tablespoons sesame seeds; toasted"
       },
       {
         title: "Sheet Pan Olive Bar Chicken",
@@ -69,7 +69,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         ingredients: 
-          "8-10 fingerling potatoes cut in half, 2 tablespoons olive oil, 1 teaspoon salt, divided, 2 pounds boneless, skinless thighs, 1 lemon, sliced, 1 small red onion, cut lengthwise into 8 wedges, 1 pound Olive bar offerings (peppers, olives, roasted garlic, marinated artichoke hearts etc.) ,1/2 teaspoon black pepper, 1 teaspoon onion powder",
+          "8-10 fingerling potatoes cut in half, 2 tablespoons olive oil, 1 teaspoon salt divided, 2 pounds boneless, skinless thighs, 1 lemon; sliced, 1 small red onion; cut lengthwise into 8 wedges, 1 pound Olive bar offerings (peppers, olives, roasted garlic, marinated artichoke hearts etc.) ,1/2 teaspoon black pepper, 1 teaspoon onion powder",
       },
       {
         title: "Carne Asada",
@@ -81,7 +81,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         ingredients:
-          "2 pounds flank or skirt steak, 1 orange, juiced, 2 limes, juiced, 2 tablespoons olive oil, 8 cloves of garlic, minced, 2 teaspoons oregano, 2 teaspoons chili powder, teaspoons kosher salt, 2 teaspoons cumin, 1 teaspoon black pepper, 1/4 teaspoon cayenne pepper",
+          "2 pounds flank or skirt steak, 1 orange; juiced, 2 limes; juiced, 2 tablespoons olive oil, 8 cloves of garlic; minced, 2 teaspoons oregano, 2 teaspoons chili powder, teaspoons kosher salt, 2 teaspoons cumin, 1 teaspoon black pepper, 1/4 teaspoon cayenne pepper",
       },
       {
         title: "Chili con Carne",
@@ -94,31 +94,31 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         ingredients:
-          "2 pounds ground beef, 2 tablespoons olive oil, 2 medium onions, chopped, 2 garlic cloves, minced, 1 medium green pepper, chopped, 1-1/2 teaspoons salt, 2 tablespoons chili powder, 3 teaspoons beef bouillon granules, 1/8 teaspoon cayenne pepper, 1/4 teaspoon ground cinnamon, 1 teaspoon ground cumin, 1 teaspoon dried oregano, 2 cans (14-1/2 ounces each) diced tomatoes, undrained, 1 cup water, 1 can (16 ounces) kidney beans, rinsed and drained, sour cream and jalapeno slices, optional",
+          "2 pounds ground beef, 2 tablespoons olive oil, 2 medium onions, chopped, 2 garlic cloves, minced, 1 medium green pepper, chopped, 1-1/2 teaspoons salt, 2 tablespoons chili powder, 3 teaspoons beef bouillon granules, 1/8 teaspoon cayenne pepper, 1/4 teaspoon ground cinnamon, 1 teaspoon ground cumin, 1 teaspoon dried oregano, 2 cans (14-1/2 ounces each) diced tomatoes, undrained, 1 cup water, 1 can (16 ounces) kidney beans; rinsed and drained, sour cream and jalapeno slices; optional",
       },
       {
         title: "PB & J Tacos",
         desc: "Great fun for the kids!",
         preparation:
-          "Using a large glass or biscuit cutter, cut bread into rounds and discard crust. Spread peanut butter to the edges of each bread round. Repeat with jelly, then sprinkle with strawberries, blueberries, and graham crackers. Drizzle with honey, fold like a taco, and serve.",
+          "Using a large glass or biscuit cutter, cut bread into rounds and discard crust. Spread peanut butter to the edges of each bread round. Repeat with jelly, then sprinkle with strawberries, blueberries, and graham crackers. Drizzle with honey, fold like a taco and serve.",
         image: "images/image09.jpg",
         category: "Mexican",
         createdAt: new Date(),
         updatedAt: new Date(),
         ingredients:
-          "4 slices white bread, 1/3 cup peanut butter, 1/3 cup jelly, 1/2 cup chopped strawberries, 1/2 cup blueberries, 1/4 c. crushed graham crackers, Honey, for drizzling,"
+          "4 slices white bread, 1/3 cup peanut butter, 1/3 cup jelly, 1/2 cup chopped strawberries, 1/2 cup blueberries, 1/4 c. crushed graham crackers, Honey for drizzling,"
       },
       {
         title: "Donut Apples",
         desc: "A tasty snack for the kids!",
         preparation:
           "Divide cream cheese among three small bowls. In one bowl, add 1 teaspoon honey. In another bowl, add melted chocolate. In the last bowl, add remaining 1 teaspoon honey and pink food coloring. Stir each bowl together until combined. Slice apples and use a biscuit or cookie cutter to hollow out centers. Spread mixtures on apple slices and top with sprinkles.",
-        image: "images/image10.jpg",
+        image: "images/image010.jpg",
         category: "American",
         createdAt: new Date(),
         updatedAt: new Date(),
         ingredients:
-          "12 oz cream cheese, softened, cut into thirds, 2 teaspoons honey, divided, 1/2 cup melted chocolate, 2 drops pink food coloring, 3 apples, Assorted sprinkles, for decorating",
+          "12 oz cream cheese, softened, cut into thirds, 2 teaspoons honey, divided, 1/2 cup melted chocolate, 2 drops pink food coloring, 3 apples, Assorted sprinkles; for decorating",
       },
     ]);
     /**

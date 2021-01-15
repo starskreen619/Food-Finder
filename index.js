@@ -92,14 +92,18 @@ app.get("/development", (req, res) => {
   })
 })
 
-app.get('/list/:id', async (req, res) => {
-  const { id } = req.params;
-  const { card } = req.body;
+app.get('/list/:recipeid', async (req, res) => {
+  const {recipeid} = req.params
+  const recipeCard = await recipes.findByPk(recipeid)
+  const {username} = req.session.user
   res.render('recipe-card', {
     locals: {
-      title: req.body.title,
-      likes: req.body.likes
-    }
+      recipe: recipeCard,
+      ingredients: recipeCard.ingredients.split(","),
+      preparation: recipeCard.preparation.split("."),
+      username
+    },
+    ...memberLayout
   })
 })
 

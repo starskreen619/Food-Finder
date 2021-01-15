@@ -15,7 +15,6 @@ const processForm = async (req, res) => {
       const listLike = await likes.create({
           recipeid
       });
-      console.log(listLike);
       res.redirect(`${req.baseUrl}/`)
   } else {
       res.redirect(req.url);
@@ -31,7 +30,6 @@ const generateList = async (req, res) => {
         user_id: id,
       }
     });
-    console.log(myRecipes)
     res.render('list', {
       locals: {
         myRecipes

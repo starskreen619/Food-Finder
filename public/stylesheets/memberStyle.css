@@ -120,3 +120,58 @@ navbar-light .navbar-brand {
 #swipe {
   align-self: center;
 }
+
+.card-title {
+  text-align: center;
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  padding-top: .5em
+}
+
+.card-image-div {
+  display: flex;
+  justify-content: center;
+}
+
+.card-image {
+  position: relative;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 2%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fe7860;
+  /* transform: translateX(-50%) translateY(-50%) scale(0.95);
+  max-height: 100%;
+/*  */
+  width: 90%;
+  height: auto;
+}
+
+.ingredients {
+  padding-top: .5em;
+}
+
+.i-title {
+  text-align: center;
+}
+
+.i-paragraph {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.prep {
+  border-top: solid;
+  border-width: thin;
+  padding-top: .5em
+}
+
+.prep-title {
+  text-align: center;
+}
+
+.prep-list {
+  list-style: none;
+}
